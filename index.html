@@ -7,7 +7,6 @@
     <style>
         @charset "UTF-8";
 
-        /* استخدام خطوط نظام آمنة بدلاً من Google Fonts */
         * {
             margin: 0;
             padding: 0;
@@ -486,54 +485,24 @@
             font-weight: 700;
         }
 
-        .disclaimer-box {
-            background: rgba(251, 191, 36, 0.06);
+        /* ملاحظة واحدة فقط تحت الجدول */
+        .kpi-note {
+            background: rgba(255, 255, 255, 0.02);
             border-radius: 16px;
-            padding: 20px 25px;
-            margin-top: 25px;
-            border: 2px solid rgba(251, 191, 36, 0.15);
+            padding: 18px 22px;
+            margin-top: 20px;
+            border-right: 6px solid #FBBF24;
+            border: 1px solid rgba(251, 191, 36, 0.10);
         }
 
-        .disclaimer-box .disclaimer-title {
-            color: #FBBF24;
-            font-size: 18px;
-            font-weight: 800;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 10px;
-        }
-
-        .disclaimer-box .disclaimer-title::before {
-            content: '⚠️';
-            font-size: 22px;
-        }
-
-        .disclaimer-box p {
+        .kpi-note p {
             color: #C4B5D8;
             line-height: 1.9;
             font-size: 15px;
         }
 
-        .disclaimer-box ul {
-            color: #C4B5D8;
-            font-size: 14px;
-            line-height: 2.2;
-            padding-right: 20px;
-            margin-top: 8px;
-        }
-
-        .disclaimer-box ul li strong {
+        .kpi-note strong {
             color: #FBBF24;
-        }
-
-        .disclaimer-box .final-note {
-            margin-top: 12px;
-            padding-top: 12px;
-            border-top: 1px solid rgba(251, 191, 36, 0.08);
-            color: #FBBF24;
-            font-weight: 700;
-            font-size: 16px;
         }
 
         .budget-note {
@@ -599,7 +568,7 @@
             .stats-grid { grid-template-columns: repeat(2, 1fr); }
             .timing-grid { grid-template-columns: 1fr; }
             .section-title { font-size: 22px; }
-            .disclaimer-box p { font-size: 14px; }
+            .kpi-note p { font-size: 14px; }
         }
 
         @media (max-width: 480px) {
@@ -1027,40 +996,15 @@
             </tbody>
         </table>
 
-        <!-- إخلاء المسؤولية -->
-        <div class="disclaimer-box">
-            <div class="disclaimer-title">إخلاء مسؤولية</div>
+        <!-- ملاحظة واحدة فقط -->
+        <div class="kpi-note">
             <p>
-                <strong>جميع الأرقام المذكورة أعلاه هي تقديرات تقريبية وليست ضمانات أو تعهدات.</strong>
+                <strong>ملاحظة:</strong> جميع الأرقام المذكورة أعلاه هي تقديرات تقريبية وليست ضمانات أو تعهدات.
                 النتائج الفعلية قابلة للتغيير – بالزيادة أو النقصان – بناءً على عوامل متعددة، منها:
-            </p>
-            <ul>
-                <li><strong>جودة المحتوى المنتج</strong> ومدى تناسبه مع اهتمامات الجمهور المستهدف.</li>
-                <li><strong>التغيرات في خوارزميات المنصات</strong> (إنستغرام، لينكد إن) خلال فترة التنفيذ.</li>
-                <li><strong>المنافسة الإعلانية</strong> في السوق، خاصة في حال تزامنت الحملات مع مواسم أو أحداث كبرى.</li>
-                <li><strong>استجابة الجمهور</strong> ومدى تفاعله مع نوعية المحتوى والعروض المقدمة.</li>
-                <li><strong>العوامل الاقتصادية والتغيرات في سلوك المستهلك</strong> خلال فترة الحملة.</li>
-            </ul>
-            <p style="margin-top: 12px;">
-                نحن ملتزمون بمتابعة الأداء <strong>أسبوعياً</strong> وتعديل الاستراتيجية بشكل مستمر
-                لضمان تحقيق أفضل النتائج الممكنة ضمن الميزانية المحددة، ولكننا <strong>لا نضمن</strong>
-                تحقيق الأرقام المذكورة أعلاه.
-            </p>
-            <div class="final-note">
-                ⚠️ هذه الأرقام هي أهداف طموحة وليست وعوداً ملزمة، وتستند إلى أفضل الممارسات والتوقعات المنطقية في السوق السعودي.
-            </div>
-        </div>
-
-        <!-- ربط الميزانية بالأرقام -->
-        <div style="background: rgba(160,100,240,0.04); border-radius: 18px; padding: 20px 25px; margin-top: 25px; border: 1px solid rgba(160,100,240,0.06);">
-            <h4 style="color: #E879F9; font-size: 18px; margin-bottom: 12px;">🔗 ربط الميزانية بالأرقام المستهدفة</h4>
-            <ul style="color: #B8A8D0; font-size: 14px; line-height: 2.2; padding-right: 20px;">
-                <li><strong>أغسطس (5,500 ريال):</strong> ميزانية اختبارية منخفضة، تهدف إلى قياس استجابة الجمهور واختيار أنجح أنواع المحتوى. الأرقام متواضعة لأننا في مرحلة التعلم.</li>
-                <li><strong>سبتمبر (7,500 ريال):</strong> زيادة الميزانية بنسبة 36%، مدعومة بتحسين الاستهداف واعتماد أفضل الممارسات المكتسبة من أغسطس. نتوقع قفزة في عدد المتابعين والعملاء المحتملين.</li>
-                <li><strong>أكتوبر (9,500 ريال):</strong> أعلى ميزانية مدعومة بـ <strong>"إعادة الاستهداف" (Retargeting)</strong>، حيث نستهدف من تفاعل معنا في الشهرين السابقين، مما يرفع معدلات التحويل ويحقق أعلى عائد استثمار.</li>
-            </ul>
-            <p style="color: #C084FC; font-size: 14px; margin-top: 12px; font-weight: 700;">
-                💡 الخلاصة: كل ريال يُنفق بناءً على قرار مدعوم ببيانات فعلية، وليس مجرد تخمين.
+                جودة المحتوى المنتج ومدى تناسبه مع اهتمامات الجمهور المستهدف، التغيرات في خوارزميات المنصات
+                (إنستغرام، لينكد إن) خلال فترة التنفيذ، المنافسة الإعلانية في السوق، خاصة في حال تزامنت الحملات
+                مع مواسم أو أحداث كبرى، استجابة الجمهور ومدى تفاعله مع نوعية المحتوى والعروض المقدمة،
+                والعوامل الاقتصادية والتغيرات في سلوك المستهلك خلال فترة الحملة.
             </p>
         </div>
     </div>
@@ -1080,8 +1024,8 @@
 
 <script>
     // التبويبات الرئيسية
-    const tabs = document.querySelectorAll('.tab-btn');
-    const panes = document.querySelectorAll('.tab-pane');
+    var tabs = document.querySelectorAll('.tab-btn');
+    var panes = document.querySelectorAll('.tab-pane');
 
     tabs.forEach(function(tab) {
         tab.addEventListener('click', function() {
